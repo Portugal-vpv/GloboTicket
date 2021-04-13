@@ -40,12 +40,14 @@ const styles = StyleSheet.create({
         width: 150,
     },
     title: {
-        fontFamily: 'Ubuntu-Regular',
-        paddingTop: 20
+        fontFamily: "Ubuntu-Bold",
+        paddingTop: 20,
+        fontSize: 16
     },
     subtitle: {
         paddingTop: 5,
-        fontFamily: 'Ubuntu-Regular'
+        fontFamily: 'Ubuntu-Bold',
+        fontSize: 14
     },
     content: {
         fontFamily: 'Ubuntu-Light',
