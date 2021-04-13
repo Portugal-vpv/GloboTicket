@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet} from 'react-native';
+import Menu from './menu';
 
 const Home = (props) => {
     return (
@@ -10,8 +11,16 @@ const Home = (props) => {
             />
             <Text style={styles.title}>Welcome to GloboTicket</Text>
             <Text style={styles.subtitle}>{props.username}</Text>
+            <Text style={styles.subtitle}>My lightsaber is {props.lightsaber}</Text>
+            <Image 
+                style={styles.heroimage}
+                source={require('./images/globe.jpg')}
+            />
             <View style={styles.textcontainer}>
                 <Text style={styles.content}>{introText}</Text>
+            </View>
+            <View style={styles.menu}>
+                <Menu />
             </View>
         </View>
     );
@@ -21,19 +30,18 @@ const introText = `This is just a random intro text. Lorem ipsum dolor mets
  This is just a random intro text. Lorem ipsum dolor mets
  This is just a random intro text. Lorem ipsum dolor mets
  This is just a random intro text. Lorem ipsum dolor mets
- This is just a random intro text. Lorem ipsum dolor mets
- This is just a random intro text. Lorem ipsum dolor mets
- This is just a random intro text. Lorem ipsum dolor mets`;
+`;
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 20
+        paddingTop: 20,
+        paddingBottom: 20,
+        flex: 1
     },
     textcontainer: {
-        textAlign: 'center',
-        paddingTop: 10
+        padding: 20
     },
     globologo: {
         height: 140,
@@ -53,6 +61,14 @@ const styles = StyleSheet.create({
         fontFamily: 'Ubuntu-Light',
         fontWeight: '300',
         width: 300
+    },
+    heroimage: {
+        height: 140,
+        width: '100%'
+    },
+    menu: {
+        position: 'absolute',
+        bottom: 10
     }
 });
 
